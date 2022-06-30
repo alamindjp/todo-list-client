@@ -4,42 +4,21 @@ import Header from '../Shared/Header/Header';
 
 const Home = () => {
     return (
-        <>
-            <Header/>
-            <div>
-                <div class="hero min-h-screen bg-base-200">
-                    <div class="hero-content flex-col lg:flex-row-reverse">
-                        <div class="text-center lg:text-left">
-                            <h1 class="text-5xl font-bold">Login now!</h1>
-                            <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        </div>
-                        <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                            <div class="card-body">
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">Email</span>
-                                    </label>
-                                    <input type="text" placeholder="email" class="input input-bordered" />
-                                </div>
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">Password</span>
-                                    </label>
-                                    <input type="text" placeholder="password" class="input input-bordered" />
-                                    <label class="label">
-                                        <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-                                    </label>
-                                </div>
-                                <div class="form-control mt-6">
-                                    <button class="btn btn-primary">Login</button>
-                                </div>
-                            </div>
-                        </div>
+        <div className='bg-blue-200 text-black'>
+            <Header />
+            <div class="card w-1/2 bg-neutral mx-auto mt-5">
+                <div class="card-body items-center text-center">
+                    <h2 className="text-3xl font-bold">Add Todo</h2>
+                    <div className="form-control">
+                        <input type="text" placeholder="Todo" className="input input-bordered bg-base-200" />
+                    </div>
+                    <div className="form-control mt-6">
+                        <button className="btn btn-primary text-white">Add Todo</button>
                     </div>
                 </div>
             </div>
-            <Footer/>
-        </>
+            <Footer />
+        </div>
     );
 };
 

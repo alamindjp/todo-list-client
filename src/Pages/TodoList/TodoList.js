@@ -4,11 +4,13 @@ import Header from '../Shared/Header/Header';
 
 const TodoList = () => {
     return (
-        <>
-            <Header/>
-            <h1 className="text-3xl">Todo List</h1>
-            <Footer/>
-        </>
+        <div className='bg-blue-200'>
+            <Header />
+            <div className=''>
+                <h1 className='text-3xl'>todo page</h1>
+            </div>
+            <Footer />
+        </div>
     );
 };
 
