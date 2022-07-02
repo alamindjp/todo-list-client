@@ -5,10 +5,11 @@ import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 
 const TodoList = () => {
-    const { isLoading, data: toDos } = useQuery('todo', () => fetch('https://red-bunnyhug-54821.herokuapp.com/todo').then(res => res.json()))
+    const { isLoading, data: toDos, refetch } = useQuery('todo', () => fetch('https://red-bunnyhug-54821.herokuapp.com/todo').then(res => res.json()))
     if (isLoading) {
         return <p>Loading.....</p>
     }
+    refetch()
     return (
         <div className='bg-blue-200'>
             <Header />
