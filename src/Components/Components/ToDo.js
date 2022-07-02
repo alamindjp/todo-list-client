@@ -15,7 +15,7 @@ const ToDo = ({ toDo, index }) => {
     const handleDelete = (id) => {
         console.log(id)
         const confirm = window.confirm('Are you sure delete this ToDo ?');
-        const url = `http://localhost:5000/todo/${id}`
+        const url = `https://red-bunnyhug-54821.herokuapp.com/todo/${id}`
         if (confirm) {
             console.log(id)
             fetch(url, {

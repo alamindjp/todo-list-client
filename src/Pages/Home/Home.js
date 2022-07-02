@@ -7,7 +7,7 @@ import Header from '../Shared/Header/Header';
 
 const Home = () => {
     const { register, formState: { errors }, reset, handleSubmit } = useForm();
-    const { isLoading, data: toDos, refetch } = useQuery('todo', () => fetch(`http://localhost:5000/todo/pending`).then(res => res.json()))
+    const { isLoading, data: toDos, refetch } = useQuery('todo', () => fetch(`https://red-bunnyhug-54821.herokuapp.com/todo/pending`).then(res => res.json()))
 
     // const handleKeyDown = (event) => {
     //     if (event.key === "Enter") {
@@ -20,7 +20,7 @@ const Home = () => {
             todoName: data.todo,
             select: data.select
         }
-        const url = `http://localhost:5000/todo`
+        const url = `https://red-bunnyhug-54821.herokuapp.com/todo`
         fetch(url, {
             method: 'POST',
             headers: {
@@ -94,14 +94,14 @@ const Home = () => {
                 </div>
             </form>
             <div>
-                <h1 className='text-3xl'>Total Work : {toDos.length}</h1>
+                <h1 className='text-3xl'>Total Work</h1>
                 <div className="bg-white w-full sm:w-4/6 mx-auto rounded-lg">
                         <div className="rounded-lg">
                             <div className='bg-slate-200 rounded-tl-lg rounded-tr-lg'>
                                 <h5 className='text-xl py-1 font-bold'>ToDos</h5>
                             </div>
                             {
-                                toDos.map((todo, index) => <ToDo
+                                toDos?.map((todo, index) => <ToDo
                                     key={todo._id}
                                     index={index}
                                     toDo={todo}
